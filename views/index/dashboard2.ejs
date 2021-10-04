@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>OnTime Dashboard</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/header2.css" rel="stylesheet" >
+        <link href="css/styles2.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+            <div class="container px-5">
+                <a class="navbar-brand fw-bold" href="/">OnTime</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="/users/logout" >Logout</a></li>
+                    </ul>
+                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                        <span class="d-flex align-items-center">
+                            <i class="bi-chat-text-fill me-2"></i>
+                            <span class="small">Send Feedback</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+               <!-- Feedback Modal-->
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body border-0 p-4">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">
+                  <h1 id="name2">Welcome</h1> <strong><%= name %>  </h1></strong><h1> </div>
+                  <br>
+                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <!-- <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-table fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Timetable</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Practice Questions</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-tree fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Career Counselling</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Get Started</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Timetables</div>
+                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Practice Questions</div>
+                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Counselling</div>
+                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                            </div>
+                        </div>
+                      </div>
+
+                        <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Item 4 Picture// Portfolio -->
+                        <div class="portfolio-item">
+                          <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                              <div class="portfolio-hover">
+                                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                              </div>
+                              <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                          </a>
+                          <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">Picture</div>
+                              <div class="portfolio-caption-subheading text-muted">Identity</div>
+                          </div>
+                      </div>
+                    </div>
+
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        </div>
+                    </div>
+                </div>
+           
+        <!-- About-->
+       
+        
+        <!-- Clients-->
+       
+        <!-- Footer-->
+       <footer class="bg-black text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div class="mb-2">&copy; OnTime 2021. All Rights Reserved.</div>
+                    <a href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="#!">FAQ</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Create Your Timetable with ease</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    
+                                    <form class="form-horizontal">
+                                        <fieldset>
+                                        
+                                        <!-- Form Name -->
+                                        <legend>Create your Timetable</legend>
+                                        <br>  <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">School Name</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: KNUST" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="selectbasic">Level</label>
+                                          <div class="col-md-4">
+                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                              <option value="1">Junior High</option>
+                                              <option value="2">Senior High</option>
+                                              <option value="3">Collage</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="selectbasic">Class Begins</label>
+                                          <div class="col-md-4">
+                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                              <option value="1">6 am</option>
+                                              <option value="2">7 am</option>
+                                              <option value="3">8 am</option>
+                                              <option value="4">9 am</option>
+                                              <option value="5">10 am</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="selectbasic">Class Ends</label>
+                                          <div class="col-md-4">
+                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                              <option value="1">1 pm</option>
+                                              <option value="2">2 pm</option>
+                                              <option value="3">3 pm</option>
+                                              <option value="4">4 pm</option>
+                                              <option value="5">5 pm</option>
+                                              <option value="6">6 pm</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="selectbasic">Attention Span</label>
+                                          <div class="col-md-4">
+                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                              <option value="1">Poor</option>
+                                              <option value="2">Average</option>
+                                              <option value="3">Very Good</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 1</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 2</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1">
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 3</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 4</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 5</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 6</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 7</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="textinput">Subject 8</label>  
+                                          <div class="col-md-4">
+                                          <input id="textinput" name="textinput" type="text" placeholder="eg: Mathematics" class="form-control input-md">
+                                            
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="radios">Difficulty</label>
+                                          <div class="col-md-4"> 
+                                            <label class="radio-inline" for="radios-0">
+                                              <input type="checkbox" name="radios" id="radios-0" value="1" >
+                                              😁
+                                            </label> 
+                                            <label class="radio-inline" for="radios-1">
+                                              <input type="checkbox" name="radios" id="radios-1" value="2">
+                                              🙂
+                                            </label> 
+                                            <label class="radio-inline" for="radios-2">
+                                              <input type="checkbox" name="radios" id="radios-2" value="3">
+                                              😐
+                                            </label> 
+                                            <label class="radio-inline" for="radios-3">
+                                              <input type="checkbox" name="radios" id="radios-3" value="4">
+                                              ☹️
+                                            </label> 
+                                            <label class="radio-inline" for="radios-4">
+                                              <input type="checkbox" name="radios" id="radios-4" value="5">
+                                              😩
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+                                        <br>
+
+                                        <!-- Button -->
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="singlebutton"></label>
+                                            <div class="col-md-4">
+                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                        
+                                        </fieldset>
+                                        </form>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                   
+                                   
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Practice Questions</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <!-- <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." /> -->
+                                    <p>Brief Discription</p>
+                                   
+
+                                      <!--WASSCE drop down-->
+                                      <h2>BECE Candidates</h2>
+                                            <p><h1>Mathmatics</h1><br>
+                                            <a href="/bece-math-quiz">Quiz</a><br>
+                                            <a href="#">Questions and Answers</a>
+                                        </p>
+                                            <p><h1>Science </h1> <br>
+                                                <a href="/becesciencequiz">Quiz</a><br>
+                                                <a href="#">Questions and Answers</a></p>
+                                            <p><h1>English Language</h1>  <br>
+                                                <a href="/bece-english-quiz">Quiz</a><br>
+                                                <a href="#">Questions and Answers</a></p>
+                                            <p><h1>Social Studies</h1>  <br>
+                                                <a href="/bece-social-quiz">Quiz</a><br>
+                                                <a href="#">Questions and Answers</a></p>
+
+
+                                                <h2>WASSCE Questions</h2>
+                                                <p><h1>Maths</h1> <br>
+                                                <a href="#">Quiz</a><br>
+                                                <a href="#">Questions and Answers</a>
+                                            </p>
+                                                <p><h1> Science </h1><br>
+                                                    <a href="#">Quiz</a><br>
+                                                    <a href="#">Questions and Answers</a></p>
+                                                <p><h1> Language</h1> <br>
+                                                    <a href="#">Quiz</a><br>
+                                                    <a href="#">Questions and Answers</a></p>
+                                                <p><h1> Studies </h1><br>
+                                                    <a href="#">Quiz</a><br>
+                                                    <a href="#">Questions and Answers</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Explore
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Graphic Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Meet the Counsellor</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                    <p>OnTime call service counselling aims to help students become self-aware and reach their highest potential while dealing with anxiety and stress. The counselling call provides a happy and comfortable environment for students to discuss their problems regarding their academic and social life.</p>
+                                    <ul  class="list-inline">
+                                        <li></li>
+                                          <form style="text-align: center;" class="form-horizontal">
+                                            <fieldset>
+                                            
+                                            <!-- Form Name -->
+                                            <legend><h1>Counselling Form</h1></legend>
+                                            
+                                            <!-- Multiple Radios (inline) -->
+                                            <div  class="form-group">
+                                              <label class="col-md-4 control-label" for="radios">PRIORITY:</label>
+                                              <div class="col-md-4"> 
+                                                <label class="radio-inline" for="radios-0">
+                                                  <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                                  Low (Schedule when available)
+                                                </label> 
+                                                <label class="radio-inline" for="radios-1">
+                                                  <input type="radio" name="radios" id="radios-1" value="2">
+                                                  High (Schedule as soon as possible)
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                              <label class="col-md-4 control-label" for="textinput">Grade</label>  
+                                              <div class="col-md-4">
+                                              <input id="textinput" name="textinput" type="text" placeholder="eg: Grade 9" class="form-control input-md" required="">
+                                                
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                              <label class="col-md-4 control-label" for="textinput">Phone Number</label>  
+                                              <div class="col-md-4">
+                                              <input id="textinput" name="textinput" type="text" placeholder="eg: +233 123456789" class="form-control input-md" required="">
+                                                
+                                              </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                              <label class="col-md-4 control-label" for="textinput">Have you contacted parent/guardian about you concern?</label>  
+                                              <div class="col-md-5">
+                                              <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                                                
+                                              </div>
+                                            </div>
+                                            <br>  <br>
+                                            <p>
+                                            <!-- Multiple Checkboxes (inline) -->
+                                            <div class="form-group">
+                                              <label class="col-md-4 control-label" for="checkboxes">Concerns related to: ( Please check all fields that apply )</label>
+                                              <div class="col-md-4">
+                                                <label class="checkbox-inline" for="checkboxes-0">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                                                  Dramatic change in behaviour
+                                                </label>
+                                                <br>
+                                                <label class="checkbox-inline" for="checkboxes-1">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                                                  Worries
+                                                </label>
+                                                <br>
+                                                <label class="checkbox-inline" for="checkboxes-2">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                                                  Daydream/Fantasies
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-3">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                                                  Grief
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-4">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
+                                                  Fears
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-5">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-5" value="6">
+                                                  Sadness
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-6">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-6" value="7">
+                                                  Motivation
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-7">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-7" value="8">
+                                                  Anxious
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-8">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-8" value="9">
+                                                  Bullying
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-9">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-9" value="10">
+                                                  Defiant
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-10">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-10" value="11">
+                                                  Impulsive
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-11">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-11" value="12">
+                                                  Easily distracted
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-12">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-12" value="13">
+                                                  Stealing
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-13">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-13" value="14">
+                                                  Social Skills
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-14">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-14" value="15">
+                                                  Personal Hygiene
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-15">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-15" value="16">
+                                                  Tardy
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-16">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-16" value="17">
+                                                  Academics
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-17">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-17" value="18">
+                                                  Sexual acting out
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-18">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-18" value="19">
+                                                  Fighting Anger
+                                                </label>  <br>
+                                                <label class="checkbox-inline" for="checkboxes-19">
+                                                  <input type="checkbox" name="checkboxes" id="checkboxes-19" value="20">
+                                                  Other
+                                                </label>  <br>
+                                              </div>
+                                            </div>
+                                          </p>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                              <label class="col-md-4 control-label" for="textinput">Clarify problem / History:</label>  
+                                              <div class="col-md-6">
+                                              <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                                                
+                                              </div>
+                                            </div>
+                                            
+                                            <!-- Button -->
+                                            <div class="form-group">
+                                              <label class="col-md-4 control-label" for="singlebutton"></label>
+                                              <div class="col-md-4">
+                                                <button id="singlebutton" name="singlebutton" class="btn btn-success">Submit</button>
+                                              </div>
+                                            </div>
+                                            
+                                            </fieldset>
+                                            </form>
+                                            
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Picture</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <p>Discription</p>
+                                    <ul class="list-inline">
+
+                                        <form action="https://formsubmit.co/ebensakyi0@gmail.com" method="POST"></form>
+                                          <input type="file" accept="image/*">
+                                          <button type="submit">Send</button>
+                                        </form>
+                                    </ul>
+                                    
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Southwest
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Website Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Window
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Photography
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
